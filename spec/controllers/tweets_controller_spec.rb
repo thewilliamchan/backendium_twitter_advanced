@@ -37,7 +37,7 @@ RSpec.describe TweetsController, type: :controller do
       }
 
       expect(JSON.parse(response.body)['tweet']['message']).to eq('Test Message')
-      expect(JSON.parse(response.body)['tweet']['image']).to include('/system/tweets/images//original/test.png')
+      expect(JSON.parse(response.body)['tweet']['image']).to include('/tweets/images//original/test.png')
     end
   end
 
