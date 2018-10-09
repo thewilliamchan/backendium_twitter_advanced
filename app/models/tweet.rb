@@ -11,6 +11,6 @@ class Tweet < ApplicationRecord
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
   def s3_credentials
-    {:bucket => ENV['PHOTO_UPLOAD_BUCKET'], :access_key_id => ENV['AWS_S3_ACCESS_KEY_ID'], :secret_access_key => ENV['AWS_S3_SECRET_ACCESS_KEY'], :s3_region => "ap-northeast-1", :s3_host_name => "s3-ap-northeast-1.amazonaws.com"}
+    {:bucket => "lession-twitter-photo-upload-williamchan", :access_key_id => "AKIAI3Z7TEDD6PXRWUDQ", :secret_access_key => "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", :s3_region => "ap-northeast-1", :s3_host_name => "s3-ap-northeast-1.amazonaws.com"}
   end
 end
