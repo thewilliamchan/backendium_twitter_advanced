@@ -38,7 +38,7 @@ class TweetsController < ApplicationController
   end
 
   def index_by_user
-    user = User.find_by(username: params[:username])
+    user = User.find_by(username: params[:username]).order(created_at: :desc)
 
     if user
       @tweets = user.tweets
